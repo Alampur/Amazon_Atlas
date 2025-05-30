@@ -10,3 +10,6 @@ $month = $today.Month
 [System.Globalization.CultureInfo]::CurrentCulture.Calendar.GetDaysInMonth($year, $month) | ForEach-Object {
     "{0}/{1}/{2}" -f $month, $_, $year
 }
+
+$lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`n"
+1..100 | ForEach-Object { $lorem } | Set-Content dummy.txt
