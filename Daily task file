@@ -1,3 +1,12 @@
 https://drive.google.com/drive/folders/1vsL_jdQIsTMz92S9s5LDqMrYeDuuwIfx   
 
 https://drive.google.com/drive/folders/1p0nar8-8UL70uPgB_DJFBTT503BaYzr5
+
+
+
+$today = Get-Date
+$year = $today.Year
+$month = $today.Month
+[System.Globalization.CultureInfo]::CurrentCulture.Calendar.GetDaysInMonth($year, $month) | ForEach-Object {
+    "{0}/{1}/{2}" -f $month, $_, $year
+}
